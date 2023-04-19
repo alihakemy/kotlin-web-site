@@ -344,18 +344,84 @@ that you can use in your programs.
 ## Practice
 
 ### Exercise 1 {initial-collapse-state="collapsed"}
-Complete the code below to make the function print `"OK"` to standard output. Test your code in [Playground](https://play.kotlinlang.org).
-```kotlin
-    fun main() {
-        TODO()
-    }
-```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" validate="false"}
+You have a list of “green” numbers and a list of “red” numbers. Complete the code below to print how many numbers there
+are in total. Test your code in [Playground](https://play.kotlinlang.org).
 
 |---|---|
 ```kotlin
-    fun main() {
-        println("OK")
-    }
+fun main() {
+    val greenNumbers = listOf(1, 4, 23)
+    val redNumbers = listOf(17, 2)
+    //Write your code here
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+fun main() {
+    val greenNumbers = listOf(1, 4, 23)
+    val redNumbers = listOf(17, 2)
+    val totalCount = greenNumbers.count() + redNumbers.count()
+    println(totalCount)
+}
+```
+{initial-collapse-state="collapsed" collapsed-title="Example solution"}
+
+### Exercise 2 {initial-collapse-state="collapsed"}
+You have a set of protocols supported by your server. A user requests to use a particular protocol. Complete the program
+to check whether the requested protocol is supported or not (`isSupported` must be a Boolean value). Test your code in 
+[Playground](https://play.kotlinlang.org).
+
+|---|---|
+```kotlin
+fun main() {
+    val SUPPORTED = setOf("HTTP", "HTTPS", "FTP")
+    val requested = "smtp"
+    val isSupported = //Write your code here
+        println("Support for $requested: $isSupported")
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+<deflist collapsible="true">
+    <def title="Hint">
+        Make sure that you check the requested protocol in upper case. You can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/uppercase.html"><code>uppercase()</code></a>
+function to help you with this.
+    </def>
+</deflist>
+
+|---|---|
+```kotlin
+fun main() {
+    val SUPPORTED = setOf("HTTP", "HTTPS", "FTP")
+    val requested = "smtp"
+    val isSupported = requested.uppercase() in SUPPORTED
+    println("Support for $requested: $isSupported")
+}
+```
+{initial-collapse-state="collapsed" collapsed-title="Example solution"}
+
+### Exercise 3 {initial-collapse-state="collapsed"}
+Define a map that relates integer numbers from 1 to 3 to their corresponding spelling. Use this map to spell the given 
+number. Test your code in [Playground](https://play.kotlinlang.org).
+
+|---|---|
+```kotlin
+fun main() {
+    val number2word = //Write your code here
+    val n = 2
+    println("$n is spelt as '${<Write your code here >}'")
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+fun main() {
+    val number2word = mapOf(1 to "one", 2 to "two", 3 to "three")
+    val n = 2
+    println("$n is spelt as '${number2word[n]}'")
+}
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
