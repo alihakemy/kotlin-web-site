@@ -91,19 +91,25 @@ discusses the different Kotlin basic types and how to declare them in the [next 
 
 ## Practice
 
-### Exercise 1 {initial-collapse-state="collapsed"}
-Complete the code below to make the function print `"OK"` to standard output. Test your code in [Playground](https://play.kotlinlang.org).
+### Exercise {initial-collapse-state="collapsed"}
+Complete the code below to make the program print `"Mary is 20 years old"` to standard output. Test your code in [Playground](https://play.kotlinlang.org).
+
+|---|---|
 ```kotlin
-    fun main() {
-        TODO()
-    }
+fun main() {
+    val name = "Mary"
+    val age = 20
+    //Write your code here
+}
 ```
 {initial-collapse-state="expanded" validate="false"}
 
 |---|---|
 ```kotlin
-    fun main() {
-        println("OK")
-    }
+fun main() {
+    val name = "Mary"
+    val age = 20
+    println("$name is $age years old")
+}
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
