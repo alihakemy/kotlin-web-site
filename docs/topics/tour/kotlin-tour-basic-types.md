@@ -41,7 +41,7 @@ fun main() {
 
 In total, Kotlin has the following basic types:
 
-|Category| Basic types|
+|**Category**| **Basic types**|
 |--|--|
 | Integers | `Byte`, `Short`, `Int`, `Long` |
 | Unsigned integers | `UByte`, `UShort`, `UInt`, `ULong` |
@@ -75,21 +75,33 @@ Now that you know how to declare basic types, it's time to learn about [collecti
 
 ## Practice
 
-<deflist collapsible="true">
-    <def title="Exercise 1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    </def>
-</deflist>
+### Exercise {initial-collapse-state="collapsed"}
+Declare the correct type for each variable listed below:
 
-<deflist collapsible="true">
-    <def title="Hint">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    </def>
-</deflist>
-
+|---|---|
 ```kotlin
-    fun main() {
-        println("Hello, world!")
-    }
+fun main() {
+    val a = 1000
+    val b = "log message"
+    val c = 3.14
+    val d = 100_000_000_000_000
+    val e = false
+    val f = '\n'
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+Test your code in [Playground](https://play.kotlinlang.org).
+
+|---|---|
+```kotlin
+fun main() {
+    val a: Int = 1000
+    val b: String = "log message"
+    val c: Double = 3.14
+    val d: Long = 100_000_000_000
+    val e: Boolean = false
+    val f: Char = '\n'
+}
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
