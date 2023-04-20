@@ -149,8 +149,7 @@ fun main() {
 
 ### Exercise 1 {initial-collapse-state="collapsed" id="functions-exercise-1"}
 Write a function called `circleArea` that takes the radius of a circle in integer format as a parameter and outputs the
-area of that circle. Test your code in [Playground](https://play.kotlinlang.org).
-
+area of that circle.
 
 |---|---|
 ```kotlin
@@ -163,7 +162,7 @@ fun main() {
     println(circleArea(2))
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-functions-exercise-1"}
 
 |---|---|
 ```kotlin
@@ -180,8 +179,7 @@ fun main() {
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
 
 ### Exercise 2 {initial-collapse-state="collapsed" id="functions-exercise-2"}
-Rewrite the `circleArea` function from the previous exercise as a single-expression function. Test your code in 
-[Playground](https://play.kotlinlang.org).
+Rewrite the `circleArea` function from the previous exercise as a single-expression function.
 
 |---|---|
 ```kotlin
@@ -193,7 +191,7 @@ fun main() {
     println(circleArea(2))
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-functions-exercise-2"}
 
 |---|---|
 ```kotlin
@@ -210,8 +208,7 @@ fun main() {
 ### Exercise 3 {initial-collapse-state="collapsed" id="functions-exercise-3"}
 You have a function that translates a time interval given in hours, minutes, and seconds into seconds. In most use cases,
 you need to pass only one or two function parameters while the rest are equal to 0. Improve the function and the code that
-calls it by using default parameter values and named arguments so that the code is easier to read. Test your code in
-[Playground](https://play.kotlinlang.org).
+calls it by using default parameter values and named arguments so that the code is easier to read.
 
 |---|---|
 ```kotlin
@@ -226,7 +223,7 @@ fun main() {
     println(intervalInSeconds(1, 0, 1))
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-functions-exercise-3"}
 
 |---|---|
 ```kotlin
@@ -469,7 +466,7 @@ The next step in our tour is to learn about [classes](kotlin-tour-classes-part-1
 ### Exercise 1 {initial-collapse-state="collapsed" id="lambdas-exercise-1"}
 You have a list of actions supported by a web service, a common prefix for all requests, and an ID of a particular resource.
 To request an action `title` over the resource with ID: 5, you need to create the following URL: `https://example.com/book-info/5/title`.
-Use a lambda expression to create a list of URLs from the list of actions.  Test your code in [Playground](https://play.kotlinlang.org).
+Use a lambda expression to create a list of URLs from the list of actions.
 
 |---|---|
 ```kotlin
@@ -481,7 +478,7 @@ fun main() {
         println(urls)
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-lambdas-exercise-1"}
 
 |---|---|
 ```kotlin
@@ -497,7 +494,7 @@ fun main() {
 
 ### Exercise 2 {initial-collapse-state="collapsed" id="lambdas-exercise-2"}
 Write a function that takes an `Int` value and an action (a function with type `() -> Unit`) which then repeats the 
-action the given number of types. Then use this function to print “Hello” 5 times.  Test your code in [Playground](https://play.kotlinlang.org).
+action the given number of types. Then use this function to print “Hello” 5 times.
 
 |---|---|
 ```kotlin
@@ -509,7 +506,7 @@ fun main() {
     //Write your code here
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-lambdas-exercise-2"}
 
 |---|---|
 ```kotlin

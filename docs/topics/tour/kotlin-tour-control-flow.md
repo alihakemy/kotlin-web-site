@@ -221,7 +221,7 @@ Now that you know the fundamentals of Kotlin control flow, it's time to learn ho
 
 ### Exercise 1 {initial-collapse-state="collapsed"}
 Using a `when` expression, update the below program so that when you input the names of GameBoy buttons, the below actions
-are printed to output. Test your code in [Playground](https://play.kotlinlang.org).
+are printed to output. 
 
 | **Button** | **Action**             |
 |------------|------------------------|
@@ -241,7 +241,7 @@ fun main() {
     )
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-control-flow-exercise-1"}
 
 |---|---|
 ```kotlin
@@ -265,8 +265,6 @@ fun main() {
 You have a program that counts pizza slices until there’s a whole pizza with 8 slices. Refactor this program in two ways:
 * using a `while` loop
 * using a `do-while` loop.
-
-Test your code in [Playground](https://play.kotlinlang.org).
 
 |---|---|
 ```kotlin
@@ -292,7 +290,7 @@ fun main() {
     println("There are $pizzaSlices slices of pizza. Hooray! We have a whole pizza! :D")
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-control-flow-exercise-2"}
 
 |---|---|
 ```kotlin
@@ -327,7 +325,6 @@ fun main() {
 Write a program that simulates the [Fizz buzz](https://en.wikipedia.org/wiki/Fizz_buzz) game. Your task is to print 
 numbers from 1 to 100 incrementally, replacing any number divisible by three with the word "fizz", and any number 
 divisible by five with the word "buzz". Any number divisible by both 3 and 5 must be replaced with the word "fizzbuzz".
-Test your code in [Playground](https://play.kotlinlang.org).
 
 <deflist collapsible="true">
     <def title="Hint">
@@ -342,7 +339,7 @@ fun main() {
     //Write your code here
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-control-flow-exercise-3"}
 
 |---|---|
 ```kotlin
@@ -364,8 +361,7 @@ fun main() {
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
 
 ### Exercise 4 {initial-collapse-state="collapsed"}
-You have a list of words. Using `for` and `if`, print only those words that start with the letter `l`. Test your code in
-[Playground](https://play.kotlinlang.org).
+You have a list of words. Using `for` and `if`, print only those words that start with the letter `l`.
 
 <deflist collapsible="true">
     <def title="Hint">
@@ -381,7 +377,7 @@ fun main() {
     //Write your code here
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-control-flow-exercise-4"}
 
 |---|---|
 ```kotlin

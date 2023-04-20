@@ -151,7 +151,6 @@ This was the last chapter of our tour. It's time to [wrap up](kotlin-tour-wrap-u
 You have the `employeeById` function that gives you access to a database of employees of a company. Unfortunately, this 
 function returns a value of the `Employee?` type, so the result can be `null`. Your goal is to write a function that 
 returns the salary of an employee when their `id` is provided, or `0` if the employee is missing from the database.
-Test your code in [Playground](https://play.kotlinlang.org).
 
 |---|---|
 ```kotlin
@@ -171,7 +170,7 @@ fun main() {
     println((1..5).sumOf { id -> salaryById(id) })
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-null-safety-exercise"}
 
 |---|---|
 ```kotlin

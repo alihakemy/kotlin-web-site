@@ -262,7 +262,7 @@ The last chapter of the tour is about Kotlin's [null safety](kotlin-tour-null-sa
 ### Exercise 1 {initial-collapse-state="collapsed"}
 Define a data class `Employee` with two properties: one for a name, and another for a salary. Make sure that the property
 for salary is mutable, otherwise you won’t get a salary boost at the end of the year! The main function demonstrates how
-you can use this data class.  Test your code in [Playground](https://play.kotlinlang.org).
+you can use this data class.
 
 |---|---|
 ```kotlin
@@ -275,7 +275,7 @@ fun main() {
     println(emp)
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-classes-exercise-1"}
 
 |---|---|
 ```kotlin
@@ -293,7 +293,7 @@ fun main() {
 ### Exercise 2 {initial-collapse-state="collapsed"}
 To test your code, you need a generator that can create random employees. Define a class with a fixed list of potential 
 names (inside the class body), and that is configured by a minimum and maximum salary (inside the class header). Once 
-again, the main function demonstrates how you can use this class. Test your code in [Playground](https://play.kotlinlang.org).
+again, the main function demonstrates how you can use this class.
 
 <deflist collapsible="true">
     <def title="Hint">
@@ -326,7 +326,7 @@ fun main() {
     println(empGen.generateEmployee())
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-classes-exercise-2"}
 
 |---|---|
 ```kotlin

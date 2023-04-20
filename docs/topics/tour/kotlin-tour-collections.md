@@ -345,7 +345,7 @@ that you can use in your programs.
 
 ### Exercise 1 {initial-collapse-state="collapsed"}
 You have a list of “green” numbers and a list of “red” numbers. Complete the code below to print how many numbers there
-are in total. Test your code in [Playground](https://play.kotlinlang.org).
+are in total.
 
 |---|---|
 ```kotlin
@@ -355,7 +355,7 @@ fun main() {
     //Write your code here
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-collections-exercise-1"}
 
 |---|---|
 ```kotlin
@@ -370,8 +370,7 @@ fun main() {
 
 ### Exercise 2 {initial-collapse-state="collapsed"}
 You have a set of protocols supported by your server. A user requests to use a particular protocol. Complete the program
-to check whether the requested protocol is supported or not (`isSupported` must be a Boolean value). Test your code in 
-[Playground](https://play.kotlinlang.org).
+to check whether the requested protocol is supported or not (`isSupported` must be a Boolean value).
 
 |---|---|
 ```kotlin
@@ -382,7 +381,7 @@ fun main() {
         println("Support for $requested: $isSupported")
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-collections-exercise-2"}
 
 <deflist collapsible="true">
     <def title="Hint">
@@ -404,7 +403,7 @@ fun main() {
 
 ### Exercise 3 {initial-collapse-state="collapsed"}
 Define a map that relates integer numbers from 1 to 3 to their corresponding spelling. Use this map to spell the given 
-number. Test your code in [Playground](https://play.kotlinlang.org).
+number.
 
 |---|---|
 ```kotlin
@@ -414,7 +413,7 @@ fun main() {
     println("$n is spelt as '${<Write your code here >}'")
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-collections-exercise-3"}
 
 |---|---|
 ```kotlin

@@ -102,7 +102,7 @@ fun main() {
     //Write your code here
 }
 ```
-{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-hello-world-exercise-1"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-hello-world-exercise"}
 
 |---|---|
 ```kotlin
@@ -112,4 +112,4 @@ fun main() {
     println("$name is $age years old")
 }
 ```
-{initial-collapse-state="collapsed" collapsed-title="Example solution" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-hello-world-exercise-1-solution"}
+{initial-collapse-state="collapsed" collapsed-title="Example solution"}

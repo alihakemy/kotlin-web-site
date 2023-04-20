@@ -90,9 +90,7 @@ fun main() {
     val f = '\n'
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
-
-Test your code in [Playground](https://play.kotlinlang.org).
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-basic-types-exercise"}
 
 |---|---|
 ```kotlin
