@@ -163,7 +163,7 @@ You can see in the example above that because sets only contain unique elements,
 > To prevent unwanted modifications, obtain read-only views of mutable sets by casting them to `Set`.
 > ```kotlin
 >     val fruit: MutableSet<String> = mutableSetOf("apple", "banana", "cherry", "cherry")
->     val fruitLocked: MutableSet<String> = fruit
+>     val fruitLocked: Set<String> = fruit
 > ```
 >
 {type="tip"}
@@ -241,7 +241,7 @@ fun main() {
 > To prevent unwanted modifications, obtain read-only views of mutable maps by casting them to `Map`.
 > ```kotlin
 >     val accountBalances: MutableMap<Int, Int> = mutableMapOf(1 to 100, 2 to 100, 3 to 100)
->     val accountBalancesLocked: MutableMap<Int, Int> = accountBalances
+>     val accountBalancesLocked: Map<Int, Int> = accountBalances
 > ```
 >
 {type="tip"}
