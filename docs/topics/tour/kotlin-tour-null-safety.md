@@ -147,21 +147,48 @@ This was the last chapter of our tour. It's time to [wrap up](kotlin-tour-beginn
 
 ## Practice
 
-<deflist collapsible="true">
-    <def title="Exercise 1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    </def>
-</deflist>
+### Exercise {initial-collapse-state="collapsed"}
+You have the `employeeById` function that gives you access to a database of employees of a company. Unfortunately, this 
+function returns a value of the `Employee?` type, so the result can be `null`. Your goal is to write a function that 
+returns the salary of an employee when their `id` is provided, or `0` if the employee is missing from the database.
+Test your code in [Playground](https://play.kotlinlang.org).
 
-<deflist collapsible="true">
-    <def title="Hint">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    </def>
-</deflist>
-
+|---|---|
 ```kotlin
-    fun main() {
-        println("Hello, world!")
-    }
+data class Employee (val name: String, var salary: Int)
+
+fun employeeById(id: Int) = when(id) {
+    1 -> Employee("Mary", 20)
+    2 -> null
+    3 -> Employee("John", 21)
+    4 -> Employee("Ann", 23)
+    else -> null
+}
+
+fun salaryById(id: Int) = //Write your code here
+    
+fun main() { 
+    println((1..5).sumOf { id -> salaryById(id) })
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+data class Employee (val name: String, var salary: Int)
+
+fun employeeById(id: Int) = when(id) {
+ 1 -> Employee("Mary", 20)
+ 2 -> null
+ 3 -> Employee("John", 21)
+ 4 -> Employee("Ann", 23)
+ else -> null
+}
+
+fun salaryById(id: Int) = employeeById(id)?.salary ?: 0
+
+fun main() {
+ println((1..5).sumOf { id -> salaryById(id) })
+}
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
