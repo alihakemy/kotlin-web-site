@@ -33,7 +33,7 @@ To create a mutable list ([`MutableList`](https://kotlinlang.org/api/latest/jvm/
 use the [`mutableListOf()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/mutable-list-of.html) function.
 
 When creating lists, Kotlin can sometimes infer the type of items stored. To declare the type explicitly, add the type
-within angled brackets after the list declaration.
+within angled brackets `<>` after the list declaration.
 
 ```kotlin
 fun main() { 
@@ -43,7 +43,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="lists-declaration-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-lists-declaration"}
 
 > To prevent unwanted modifications, obtain read-only views of mutable lists by casting them to `List`.
 > ```kotlin
@@ -64,7 +64,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-access-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-list-access"}
 
 To get the first or last item in a list, use [`first()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/first.html)
 and [`last()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/last.html) functions respectively.
@@ -78,7 +78,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-first-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-list-first"}
 
 > [`first()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/first.html) and [`last()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/last.html)
 > functions are examples of **extension** functions. To call an extension function on an object, write the function name 
@@ -101,7 +101,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-count-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-list-count"}
 
 To check that an item is in a list, use the [`in`](operator-overloading.md#in-operator) operator:
 
@@ -114,7 +114,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-in-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-list-in"}
 
 To add or remove items from a mutable list, use [`add()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/add.html)
 and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
@@ -131,7 +131,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="list-add-remove-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-list-add-remove"}
 
 ## Set
 
@@ -142,7 +142,7 @@ To create a mutable set ([`MutableSet`](https://kotlinlang.org/api/latest/jvm/st
 use the [`mutableSetOf()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/mutable-set-of.html) function.
 
 When creating sets, Kotlin can sometimes infer the type of items stored. To declare the type explicitly, add the type
-within angled brackets after the set declaration.
+within angled brackets `<>` after the set declaration.
 
 ```kotlin
 fun main() {
@@ -156,7 +156,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="sets-declaration-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-sets-declaration"}
 
 You can see in the example above that because sets only contain unique elements, the duplicate `"cherry"` item is dropped.
 
@@ -168,7 +168,7 @@ You can see in the example above that because sets only contain unique elements,
 >
 {type="tip"}
 
-As sets are **unordered**, it's not possible to access an item at a particular index.
+As sets are **unordered**, you can't access an item at a particular index.
 
 To get the number of items in a set, use the [`count()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/count.html)
 function:
@@ -182,7 +182,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="set-count-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-set-count"}
 
 To check that an item is in a set, use the [`in`](operator-overloading.md#in-operator) operator:
 
@@ -195,7 +195,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="set-in-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-set-in"}
 
 To add or remove items from a mutable set, use [`add()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/add.html)
 and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
@@ -212,7 +212,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="set-add-remove-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-set-add-remove"}
 
 ## Map
 
@@ -223,7 +223,7 @@ To create a mutable map ([`MutableMap`](https://kotlinlang.org/api/latest/jvm/st
 use the [`mutableMapOf()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/mutable-map-of.html) function.
 
 When creating maps, Kotlin can sometimes infer the type of items stored. To declare the type explicitly, add the types
-of the keys and values within angled brackets after the map declaration.
+of the keys and values within angled brackets `<>` after the map declaration.
 
 The easiest way to create maps is to use the [`to`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/to.html) function:
 
@@ -236,7 +236,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="maps-declaration-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-maps-declaration"}
 
 > To prevent unwanted modifications, obtain read-only views of mutable maps by casting them to `Map`.
 > ```kotlin
@@ -258,7 +258,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-access-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-map-access"}
 
 To get the number of items in a map, use the [`count()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/count.html)
 function:
@@ -272,7 +272,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-count-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-map-count"}
 
 To add or remove items from a mutable map, use [`put()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/put.html)
 and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
@@ -289,7 +289,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-put-remove-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-map-put-remove"}
 
 To check if a specific key is already included in a map, use the [`containsKey()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/contains-key.html)
 function:
@@ -303,7 +303,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-contains-keys-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-map-contains-keys"}
 
 To obtain a collection of the keys or values of a map, use the [`keys`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/keys.html)
 and [`values`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/values.html) properties respectively:
@@ -319,7 +319,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-keys-values-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-map-keys-values"}
 
 To check that a key or value is in a map, use the [`in`](operator-overloading.md#in-operator) operator:
 
@@ -334,7 +334,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="map-in-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-map-in"}
 
 For more information on what you can do with collections, see [Collections](collections-overview.md).
 

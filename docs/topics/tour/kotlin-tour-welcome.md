@@ -3,9 +3,9 @@
 This tour covers the fundamentals of the Kotlin programming language and can be completed entirely within your 
 browser. There is no installation required.
 
-Each chapter in our tutorial contains a practice section, containing exercises that test your understanding of what
-you have just learned. We recommend that you complete these exercises in [Kotlin Playground](https://play.kotlinlang.org).
-Example solutions are provided for each exercise.
+Each chapter in our tutorial has a practice section that contains exercises to test your understanding of what
+you have just learned. Each exercise has starting code that you can edit to provide your solution. In addition, each exercise
+has example solutions for your reference.
 
 Ready to go? Then pick the starting point that suits you.
 

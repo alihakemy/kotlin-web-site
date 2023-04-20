@@ -27,7 +27,7 @@ In Kotlin:
 * the body of a function is written within curly braces `{}`
 * [`println()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/println.html) and [`print()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/print.html) functions print their arguments to standard output
 
-Functions will be discussed in more detail in a couple of chapters. Until then, all examples use the `main` function.
+Functions are discussed in more detail in a couple of chapters. Until then, all examples use the `main` function.
 
 ## Variables
 
@@ -49,7 +49,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="variables-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-variables"}
 
 > Variables can be declared at top level as well as within functions.
 {type="info"}
@@ -62,7 +62,7 @@ As `customers` is a mutable variable, its value can be reassigned after declarat
 
 ## String templates
 
-It's useful to know how to print the contents of variables to standard output. You can do this with string templates. 
+It's useful to know how to print the contents of variables to standard output. You can do this with **string templates**. 
 You can use template expressions to access data stored in variables and other objects, and convert them into strings.
 A string value is a sequence of characters in double quotes (`"`). Template expressions always start with a dollar sign (`$`).
 
@@ -82,12 +82,12 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="string-templates-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-string-templates"}
 
 For more information, see [String templates](strings.md).
 
-You'll notice that there aren't any types declared for variables. Kotlin has inferred the type itself: `Int`. This tour
-discusses the different Kotlin basic types and how to declare them in the [next chapter](kotlin-tour-basic-types.md).
+You will notice that there aren't any types declared for variables. Kotlin has inferred the type itself: `Int`. This tour
+explains the different Kotlin basic types and how to declare them in the [next chapter](kotlin-tour-basic-types.md).
 
 ## Practice
 
