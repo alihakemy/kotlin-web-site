@@ -1,6 +1,6 @@
-[//]: # (title: Beginner wrap up)
+[//]: # (title: Wrap up)
 
-Congratulations! Now that you have completed our Kotlin first steps tour, here are some suggested next steps for your Kotlin journey.
+Congratulations! Now that you have completed the Kotlin tour, here are some suggested next steps for your Kotlin journey.
 
 Tutorials and examples:
 * [Create an Android app](https://developer.android.com/kotlin)
