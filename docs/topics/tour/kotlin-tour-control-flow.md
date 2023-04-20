@@ -219,21 +219,178 @@ Now that you know the fundamentals of Kotlin control flow, it's time to learn ho
 
 ## Practice
 
-<deflist collapsible="true">
-    <def title="Exercise 1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    </def>
-</deflist>
+### Exercise 1 {initial-collapse-state="collapsed"}
+Using a `when` expression, update the below program so that when you input the names of GameBoy buttons, the below actions
+are printed to output. Test your code in [Playground](https://play.kotlinlang.org).
+
+| **Button** | **Action**             |
+|------------|------------------------|
+| A          | Yes                    |
+| B          | No                     |
+| X          | Menu                   |
+| Y          | Nothing                |
+| Other      | There is no such button |
+
+|---|---|
+```kotlin
+fun main() {
+    val button = readln()
+
+    println(
+        //Write your code here
+    )
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+fun main() {
+    val button = readln()
+    
+    println(
+        when (button) {
+            "A" -> "Yes"
+            "B" -> "No"
+            "X" -> "Menu"
+            "Y" -> "Nothing"
+            else -> "There is no such button"
+        }
+    )
+}
+```
+{initial-collapse-state="collapsed" collapsed-title="Example solution"}
+
+### Exercise 2 {initial-collapse-state="collapsed"}
+You have a program that counts pizza slices until there’s a whole pizza with 8 slices. Refactor this program in two ways:
+* using a `while` loop
+* using a `do-while` loop.
+
+Test your code in [Playground](https://play.kotlinlang.org).
+
+|---|---|
+```kotlin
+fun main() {
+    var pizzaSlices = 0
+    // Start refactoring here
+    pizzaSlices++
+    println("There's only $pizzaSlices slice/s of pizza :(")
+    pizzaSlices++
+    println("There's only $pizzaSlices slice/s of pizza :(")
+    pizzaSlices++
+    println("There's only $pizzaSlices slice/s of pizza :(")
+    pizzaSlices++
+    println("There's only $pizzaSlices slice/s of pizza :(")
+    pizzaSlices++
+    println("There's only $pizzaSlices slice/s of pizza :(")
+    pizzaSlices++
+    println("There's only $pizzaSlices slice/s of pizza :(")
+    pizzaSlices++
+    println("There's only $pizzaSlices slice/s of pizza :(")
+    pizzaSlices++
+    // End refactoring here
+    println("There are $pizzaSlices slices of pizza. Hooray! We have a whole pizza! :D")
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+fun main() {
+    var pizzaSlices = 0
+    while ( pizzaSlices < 7 ) {
+        pizzaSlices++
+        println("There's only $pizzaSlices slice/s of pizza :(")
+    }
+    pizzaSlices++
+    println("There are $pizzaSlices slices of pizza. Hooray! We have a whole pizza! :D")
+}
+```
+{initial-collapse-state="collapsed" collapsed-title="Example solution 1"}
+
+|---|---|
+```kotlin
+fun main() {
+    var pizzaSlices = 0
+    pizzaSlices++
+    do {
+        println("There's only $pizzaSlices slice/s of pizza :(")
+        pizzaSlices++
+    } while ( pizzaSlices < 8 )
+    println("There are $pizzaSlices slices of pizza. Hooray! We have a whole pizza! :D")
+}
+
+```
+{initial-collapse-state="collapsed" collapsed-title="Example solution 2"}
+
+### Exercise 3 {initial-collapse-state="collapsed"}
+Write a program that simulates the [Fizz buzz](https://en.wikipedia.org/wiki/Fizz_buzz) game. Your task is to print 
+numbers from 1 to 100 incrementally, replacing any number divisible by three with the word "fizz", and any number 
+divisible by five with the word "buzz". Any number divisible by both 3 and 5 must be replaced with the word "fizzbuzz".
+Test your code in [Playground](https://play.kotlinlang.org).
 
 <deflist collapsible="true">
     <def title="Hint">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        Use a <code>for</code> loop to count numbers and a <code>when</code> expression to decide what to print at each
+        step. 
     </def>
 </deflist>
 
+|---|---|
 ```kotlin
+fun main() {
+    //Write your code here
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+fun main() {
     fun main() {
-        println("Hello, world!")
+        for (number in 1..100) {
+            println(
+                when {
+                    number % 15 == 0 -> "fizzbuzz"
+                    number % 3 == 0 -> "fizz"
+                    number % 5 == 0 -> "buzz"
+                    else -> number.toString()
+                }
+            )
+        }
     }
+}
+```
+{initial-collapse-state="collapsed" collapsed-title="Example solution"}
+
+### Exercise 4 {initial-collapse-state="collapsed"}
+You have a list of words. Using `for` and `if`, print only those words that start with the letter `l`. Test your code in
+[Playground](https://play.kotlinlang.org).
+
+<deflist collapsible="true">
+    <def title="Hint">
+        Use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/starts-with.html"> <code>startsWith()</code>
+        </a> function for <code>String</code> type. 
+    </def>
+</deflist>
+
+|---|---|
+```kotlin
+fun main() {
+    val words = listOf("dinosaur", "limousine", "magazine", "language")
+    //Write your code here
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+fun main() {
+    val words = listOf("dinosaur", "limousine", "magazine", "language")
+    for (w in words) {
+        if (w.startsWith("l"))
+            println(w)
+    }
+}
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
