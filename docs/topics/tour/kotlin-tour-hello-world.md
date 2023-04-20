@@ -102,7 +102,7 @@ fun main() {
     //Write your code here
 }
 ```
-{initial-collapse-state="expanded" validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-hello-world-exercise-1"}
+{validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-hello-world-exercise-1"}
 
 |---|---|
 ```kotlin
