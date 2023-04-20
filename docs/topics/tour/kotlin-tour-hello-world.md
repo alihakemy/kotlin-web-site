@@ -92,7 +92,7 @@ discusses the different Kotlin basic types and how to declare them in the [next 
 ## Practice
 
 ### Exercise {initial-collapse-state="collapsed"}
-Complete the code below to make the program print `"Mary is 20 years old"` to standard output. Test your code in [Playground](https://play.kotlinlang.org).
+Complete the code below to make the program print `"Mary is 20 years old"` to standard output.
 
 |---|---|
 ```kotlin
@@ -102,7 +102,7 @@ fun main() {
     //Write your code here
 }
 ```
-{initial-collapse-state="expanded" validate="false"}
+{initial-collapse-state="expanded" validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-hello-world-exercise-1"}
 
 |---|---|
 ```kotlin
@@ -112,4 +112,4 @@ fun main() {
     println("$name is $age years old")
 }
 ```
-{initial-collapse-state="collapsed" collapsed-title="Example solution"}
+{initial-collapse-state="collapsed" collapsed-title="Example solution" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-hello-world-exercise-1-solution"}
