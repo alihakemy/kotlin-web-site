@@ -91,7 +91,7 @@ fun main() {
 
 ## Unit type
 
-If your function doesn't return a useful value then it's return type is `Unit`. `Unit` is a type with only one value - 
+If your function doesn't return a useful value then its return type is `Unit`. `Unit` is a type with only one value - 
 `Unit`. 
 
 > You don't have to declare that `Unit` is returned explicitly in your function body.
@@ -128,7 +128,7 @@ fun main() {
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-simple-function-before-kotlin"}
 
 You can remove the curly braces `{}` and declare the function body using the assignment operator `=`. And due to Kotlin's
-powerful type inference, you can also omit the return type. This function then becomes one line:
+type inference, you can also omit the return type. This function then becomes one line:
 
 ```kotlin
 fun sum(x: Int, y: Int) = x + y
@@ -362,7 +362,7 @@ The `map()` function accepts a lambda expression as a predicate:
 Before demonstrating how you can return a lambda expression from a function, you first need to understand **function
 types**.
 
-You have already learned about basic types but functions themselves also have a type. Kotlin's powerful type inference 
+You have already learned about basic types but functions themselves also have a type. Kotlin's type inference 
 can infer a function's type most of the time from the parameter type. But there may be times when you need to explicitly
 specify the function type so that the compiler knows what is and isn't allowed for that function.
 
