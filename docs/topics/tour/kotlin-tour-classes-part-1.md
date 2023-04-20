@@ -259,21 +259,96 @@ The last chapter of the tour is about Kotlin's [null safety](kotlin-tour-null-sa
 
 ## Practice
 
+### Exercise 1 {initial-collapse-state="collapsed"}
+Define a data class `Employee` with two properties: one for a name, and another for a salary. Make sure that the property
+for salary is mutable, otherwise you won’t get a salary boost at the end of the year! The main function demonstrates how
+you can use this data class.  Test your code in [Playground](https://play.kotlinlang.org).
+
+|---|---|
+```kotlin
+//Write your code here
+
+fun main() {
+    val emp = Employee("Mary", 20)
+    println(emp)
+    emp.salary += 10
+    println(emp)
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+data class Employee(val name: String, var salary: Int)
+
+fun main() {
+    val emp = Employee("Mary", 20)
+    println(emp)
+    emp.salary += 10
+    println(emp)
+}
+```
+{initial-collapse-state="collapsed" collapsed-title="Example solution"}
+
+### Exercise 2 {initial-collapse-state="collapsed"}
+To test your code, you need a generator that can create random employees. Define a class with a fixed list of potential 
+names (inside the class body), and that is configured by a minimum and maximum salary (inside the class header). Once 
+again, the main function demonstrates how you can use this class. Test your code in [Playground](https://play.kotlinlang.org).
+
 <deflist collapsible="true">
-    <def title="Exercise 1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    <def title="Hint">
+        Lists have an extension function called <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/random.html"><code>random()</code></a>
+        that returns a random item within a list.
     </def>
 </deflist>
 
 <deflist collapsible="true">
     <def title="Hint">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        <code>Random.nextInt(from = ..., until = ...)</code> gives you a random <code>Int</code> number within specified limits.
     </def>
 </deflist>
 
+|---|---|
 ```kotlin
-    fun main() {
-        println("Hello, world!")
-    }
+import kotlin.random.Random
+
+data class Employee(val name: String, var salary: Int)
+
+//Write your code here
+
+fun main() {
+    val empGen = RandomEmployeeGenerator(10, 30)
+    println(empGen.generateEmployee())
+    println(empGen.generateEmployee())
+    println(empGen.generateEmployee())
+    empGen.minSalary = 50
+    empGen.maxSalary = 100
+    println(empGen.generateEmployee())
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+import kotlin.random.Random
+
+data class Employee(val name: String, var salary: Int)
+
+class RandomEmployeeGenerator(var minSalary: Int, var maxSalary: Int) {
+    val names = listOf("John", "Mary", "Ann", "Paul", "Jack", "Elizabeth")
+    fun generateEmployee() =
+        Employee(names.random(),
+            Random.nextInt(from = minSalary, until = maxSalary))
+}
+
+fun main() {
+    val empGen = RandomEmployeeGenerator(10, 30)
+    println(empGen.generateEmployee())
+    println(empGen.generateEmployee())
+    println(empGen.generateEmployee())
+    empGen.minSalary = 50
+    empGen.maxSalary = 100
+    println(empGen.generateEmployee())
+}
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
