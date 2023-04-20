@@ -145,6 +145,104 @@ fun main() {
 > 
 {type="note"}
 
+## Functions practice
+
+### Exercise 1 {initial-collapse-state="collapsed" id="functions-exercise-1"}
+Write a function called `circleArea` that takes the radius of a circle in integer format as a parameter and outputs the
+area of that circle. Test your code in [Playground](https://play.kotlinlang.org).
+
+
+|---|---|
+```kotlin
+import kotlin.math.PI
+
+fun circleArea() {
+    //Write your code here
+}
+fun main() {
+    println(circleArea(2))
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+import kotlin.math.PI
+
+fun circleArea(radius: Int): Double {
+    return PI*radius*radius
+}
+fun main() {
+    println(circleArea(2)) // 12.566370614359172
+}
+
+```
+{initial-collapse-state="collapsed" collapsed-title="Example solution"}
+
+### Exercise 2 {initial-collapse-state="collapsed" id="functions-exercise-2"}
+Rewrite the `circleArea` function from the previous exercise as a single-expression function. Test your code in 
+[Playground](https://play.kotlinlang.org).
+
+|---|---|
+```kotlin
+import kotlin.math.PI
+
+//Write your code here
+
+fun main() {
+    println(circleArea(2))
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+import kotlin.math.PI
+
+fun circleArea(radius: Int): Double = PI*radius*radius
+
+fun main() {
+    println(circleArea(2)) // 12.566370614359172
+}
+```
+{initial-collapse-state="collapsed" collapsed-title="Example solution"}
+
+### Exercise 3 {initial-collapse-state="collapsed" id="functions-exercise-3"}
+You have a function that translates a time interval given in hours, minutes, and seconds into seconds. In most use cases,
+you need to pass only one or two function parameters while the rest are equal to 0. Improve the function and the code that
+calls it by using default parameter values and named arguments so that the code is easier to read. Test your code in
+[Playground](https://play.kotlinlang.org).
+
+|---|---|
+```kotlin
+fun intervalInSeconds(hours: Int, minutes: Int, seconds: Int) =
+    ((hours * 60) + minutes) * 60 + seconds
+
+fun main() {
+    println(intervalInSeconds(1, 20, 15))
+    println(intervalInSeconds(0, 1, 25))
+    println(intervalInSeconds(2, 0, 0))
+    println(intervalInSeconds(0, 10, 0))
+    println(intervalInSeconds(1, 0, 1))
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+fun intervalInSeconds(hours: Int = 0, minutes: Int = 0, seconds: Int = 0) =
+    ((hours * 60) + minutes) * 60 + seconds
+
+fun main() {
+    println(intervalInSeconds(1, 20, 15))
+    println(intervalInSeconds(minutes = 1, seconds = 25))
+    println(intervalInSeconds(hours = 2))
+    println(intervalInSeconds(minutes = 10))
+    println(intervalInSeconds(hours = 1, seconds = 1))
+}
+```
+{initial-collapse-state="collapsed" collapsed-title="Example solution"}
+
 ## Lambda expressions
 
 Kotlin allows you to write even more concise code for functions by using lambda expressions.
@@ -366,23 +464,65 @@ For more information on lambda expressions, see [Lambda expressions and anonymou
 
 The next step in our tour is to learn about [classes](kotlin-tour-classes-part-1.md) in Kotlin.
 
-## Practice
+## Lambda expressions practice
 
-<deflist collapsible="true">
-    <def title="Exercise 1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    </def>
-</deflist>
+### Exercise 1 {initial-collapse-state="collapsed" id="lambdas-exercise-1"}
+You have a list of actions supported by a web service, a common prefix for all requests, and an ID of a particular resource.
+To request an action `title` over the resource with ID: 5, you need to create the following URL: `https://example.com/book-info/5/title`.
+Use a lambda expression to create a list of URLs from the list of actions.  Test your code in [Playground](https://play.kotlinlang.org).
 
-<deflist collapsible="true">
-    <def title="Hint">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    </def>
-</deflist>
-
+|---|---|
 ```kotlin
-    fun main() {
-        println("Hello, world!")
+fun main() {
+    val actions = listOf("title", "year", "author")
+    val prefix = "https://example.com/book-info"
+    val id = 5
+    val urls = //Write your code here
+        println(urls)
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+fun main() {
+    val actions = listOf("title", "year", "author")
+    val prefix = "https://example.com/book-info"
+    val id = 5
+    val urls = actions.map { action -> "$prefix/$id/$action" }
+    println(urls)
+}
+```
+{initial-collapse-state="collapsed" collapsed-title="Example solution"}
+
+### Exercise 2 {initial-collapse-state="collapsed" id="lambdas-exercise-2"}
+Write a function that takes an `Int` value and an action (a function with type `() -> Unit`) which then repeats the 
+action the given number of types. Then use this function to print “Hello” 5 times.  Test your code in [Playground](https://play.kotlinlang.org).
+
+|---|---|
+```kotlin
+fun repeatN(n: Int, action: () -> Unit) {
+    //Write your code here
+}
+
+fun main() {
+    //Write your code here
+}
+```
+{initial-collapse-state="expanded" validate="false"}
+
+|---|---|
+```kotlin
+fun repeatN(n: Int, action: () -> Unit) {
+    for (i in 1..n) {
+        action()
     }
+}
+
+fun main() {
+    repeatN(5) {
+        println("Hello")
+    }
+}
 ```
 {initial-collapse-state="collapsed" collapsed-title="Example solution"}
