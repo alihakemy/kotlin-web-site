@@ -105,6 +105,26 @@ fun main() {
 If when is used as an expression, the else branch is mandatory, unless the compiler can detect that all possible cases 
 are covered by the branch conditions.
 
+The previous example showed that `when` is useful for matching a variable. `when` is also useful when you need to check
+a chain of Boolean expressions:
+
+```kotlin
+fun main() {
+//sampleStart
+    val temp = 18
+
+    val description = when {
+        temp < 0 -> "very cold"   //If temp <0 is true, sets description to "very cold"
+        temp < 10 -> "a bit cold" //If temp < 10 is true, sets description to "a bit cold"
+        temp < 20 -> "warm"       //If temp < 20 is true, sets description to "warm"
+        else -> "hot"             //Sets description to "hot" if no previous condition is satisfied
+    }
+    println(description)
+//sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-when-expression-boolean-kotlin"}
+
 ## Ranges
 
 Before we talk about loops, it's useful to know how to construct ranges for loops to iterate over.

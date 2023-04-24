@@ -53,7 +53,7 @@ fun main() {
 ```
 {kotlin-runnable="true" validate="false" kotlin-min-compiler-version="1.3" id="tour-nullable-type-kotlin"}
 
-> 'length' is a property of the [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/) class that 
+> `length` is a property of the [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/) class that 
 > contains the number of characters within a string.
 >
 {type="tip"}
@@ -82,9 +82,9 @@ fun main() {
 
 ## Use safe calls
 
-To safely access a property that might contain a null value, use the safe call operator `?.`. The safe call operator
-returns `null` if the property is `null`. This is useful if you want to avoid the presence of null values triggering
-errors in your code.
+To safely access properties of an object that might contain a null value, use the safe call operator `?.`. The safe call
+operator returns `null` if the object's property is `null`. This is useful if you want to avoid the presence of null
+values triggering errors in your code.
 
 In the below example, the `lengthString()` function uses a safe call to return either the length of the string or `null`:
 
@@ -99,8 +99,8 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-safe-call-property-kotlin"}
 
-> Safe calls can be chained so that if any property contains a null value, then `null` is returned without an error being
-> thrown. For example:
+> Safe calls can be chained so that if any property of an object contains a null value, then `null` is returned without 
+> an error being thrown. For example:
 > ```kotlin
 >   person.company?.address?.country
 > ```

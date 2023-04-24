@@ -78,7 +78,7 @@ In the above example:
 Kotlin classes can have many constructors, including ones that you define yourself. To learn more about how to declare 
 multiple constructors, see [Constructors](classes.md#constructors).
 
-## Access class properties
+## Access properties
 
 To access a property of an instance, write the name of the property after the instance name appended with a period `.`:
 
@@ -130,33 +130,77 @@ fun main() {
 ## Data classes
 
 Kotlin has **data classes** which are particularly useful for storing data. Data classes have the same functionality as 
-classes, but they come automatically with additional member functions. These member functions allow you to easily copy 
-instances of a class, compare instances, print the instance to readable output, and more. As these functions are
-automatically available, you don't have to waste time writing the same boilerplate code for each of your classes.
+classes, but they come automatically with additional member functions. These member functions allow you to easily print 
+the instance to readable output, compare instances of a class, copy instances, and more. As these functions are
+automatically available, you don't have to spend time writing the same boilerplate code for each of your classes.
 
 To declare a data class, use the keyword `data`:
 ```kotlin
 data class User(val name: String, val id: Int)
 ```
 
-All the predefined member functions of a data class are listed in the table below:
+The most useful predefined member functions of data classes are listed in the table below:
 
 | **Function**       | **Description**                                                                                                |
 |--------------------|----------------------------------------------------------------------------------------------------------------|
-| `copy()`           | Creates a class instance by copying another, potentially with some different properties.                       |
-| `componentN()`     | Accesses properties of the class in their order of declaration. E.g. `component1` accesses the first property. |
-| `equals()` or `==` | Compares instances of a class.                                                                                 |
-| `hashCode()`       | Exposes the hash code of an instance, for comparison.                                                          |
 | `toString()`       | Prints a readable string of the class instance and its properties.                                             |
+| `equals()` or `==` | Compares instances of a class.                                                                                 |
+| `copy()`           | Creates a class instance by copying another, potentially with some different properties.                       |
 
 See the following sections for examples of how to use each function:
-* [Copy instance](#copy-instance)
-* [Access properties](#access-data-class-properties)
-* [Compare instances](#compare-instances)
-* [Expose hash code](#expose-hash-code)
 * [Print as string](#print-as-string)
+* [Compare instances](#compare-instances)
+* [Copy instance](#copy-instance)
+
+### Print as string
+
+To print a readable string of a class instance, you can explicitly call the `toString()` function, or use print functions 
+(`println()` and `print()`) which automatically call `toString()` for you:
+
+```kotlin
+data class User(val name: String, val id: Int)
+
+fun main() {
+    val user = User("Alex", 1)
+    
+    //sampleStart
+    println(user)            //Automatically uses toString() function so that output is easy to read
+    //User(name=Alex, id=1)
+    //sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-print-string-kotlin"}
+
+This is particularly useful when debugging or creating logs.
+
+### Compare instances
+
+To compare data class instances, use the equality operator (`==`):
+
+```kotlin
+data class User(val name: String, val id: Int)
+
+fun main() {
+    //sampleStart
+    val user = User("Alex", 1)
+    val secondUser = User("Alex", 1)
+    val thirdUser = User("Max", 2)
+    
+    println("user == secondUser: ${user == secondUser}") //Compares user to second user
+    //user == secondUser: true
+    println("user == thirdUser: ${user == thirdUser}")   //Compares user to third user
+    //user == thirdUser: false
+    //sampleEnd
+}
+```
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-compare-instances-kotlin"}
 
 ### Copy instance
+
+To create an exact copy of a data class instance, call the `copy()` function on the instance.
+
+To create a copy of a data class instance **and** change some properties, call the `copy()` function on the instance 
+**and** add replacement values for properties as function parameters.
 
 ```kotlin
 data class User(val name: String, val id: Int)
@@ -178,84 +222,12 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-copy-instance-kotlin"}
 
-### Access data class properties
+Creating a copy of an instance is safer than modifying the original instance because any code that relies on the
+original instance isn't affected by the copy and what you do with it.
 
-```kotlin
-data class User(val name: String, val id: Int)
+For more information about data classes, see [Data classes](data-classes.md).
 
-fun main() {
-    //sampleStart
-    val user = User("Alex", 1)
-    
-    println(user.component1()) //Prints first property of user
-    //Alex
-    println(user.component2()) //Prints second property of user
-    //1
-    //sampleEnd
-}
-```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-access-properties-kotlin"}
-
-### Compare instances
-
-```kotlin
-data class User(val name: String, val id: Int)
-
-fun main() {
-    //sampleStart
-    val user = User("Alex", 1)
-    val secondUser = User("Alex", 1)
-    val thirdUser = User("Max", 2)
-    
-    println("user == secondUser: ${user == secondUser}") //Compares user to second user
-    //user == secondUser: true
-    println("user == thirdUser: ${user == thirdUser}")   //Compares user to third user
-    //user == thirdUser: false
-    //sampleEnd
-}
-```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-compare-instances-kotlin"}
-
-### Expose hash code
-
-```kotlin
-data class User(val name: String, val id: Int)
-
-fun main() {
-    //sampleStart
-    val user = User("Alex", 1)
-    val secondUser = User("Alex", 1)
-    val thirdUser = User("Max", 2)
-    
-    //hashCode()
-    println(user.hashCode())
-    //63347075
-    println(secondUser.hashCode())
-    //63347075
-    println(thirdUser.hashCode())
-    //2390846
-    //sampleEnd
-}
-```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-expose-hash-code-kotlin"}
-
-### Print as string
-
-```kotlin
-data class User(val name: String, val id: Int)
-
-fun main() {
-    val user = User("Alex", 1)
-    
-    //sampleStart
-    println(user)            //Automatically uses toString() function so that output is easy to read
-    //User(name=Alex, id=1)
-    //sampleEnd
-}
-```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-print-string-kotlin"}
-
-The last chapter of the tour is about Kotlin's [null safety](kotlin-tour-null-safety.md).
+The last chapter of this tour is about Kotlin's [null safety](kotlin-tour-null-safety.md).
 
 ## Practice
 

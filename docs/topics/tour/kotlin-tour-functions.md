@@ -45,8 +45,8 @@ fun main() {
 
 ## Named arguments
 
-When calling your function, you don't have to include the parameter name. However, if you do, then you can change the order
-that the parameters are provided.
+When calling your function, you don't have to include parameter names. However, if you do, then you can write the 
+parameters in any order. Using named arguments also makes your code easier to read.
 
 In the below example, [string templates](strings.md#string-templates) (`$`) are used to access
 the parameter values, convert them to `String` type, and then concatenate them into a string for printing.
@@ -285,15 +285,13 @@ Lambda expressions can be used in a number of ways. You can:
 
 The following sections demonstrate each of these use cases.
 
-### Capture a variable
+### Assign to variable
 
-Assigning a lambda expression to a variable is also referred to as capturing a variable. You assign a lambda expression 
-to a variable by using the assignment operator (`=`):
+To assign a lambda expression to a variable, use the assignment operator (`=`):
 
 ```kotlin
-val upperCase = { string: String -> string.uppercase() }
-
 fun main() {
+    val upperCase = { string: String -> string.uppercase() }
     println(upperCase("hello"))
     //HELLO
 }
