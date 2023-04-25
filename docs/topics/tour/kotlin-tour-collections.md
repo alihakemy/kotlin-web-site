@@ -38,18 +38,19 @@ within angled brackets `<>` after the list declaration.
 ```kotlin
 fun main() { 
 //sampleStart
-    val readOnlyNumbers = listOf(1, 2, 3)                  //Read only list
-    val numbers: MutableList<Int> = mutableListOf(1, 2, 3) //Mutable list with explicit type declaration
+    val readOnlyNumbers = listOf(1, 2, 3)                  // Read only list
+    val numbers: MutableList<Int> = mutableListOf(1, 2, 3) // Mutable list with explicit type declaration
 //sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-lists-declaration"}
 
-> To prevent unwanted modifications, obtain read-only views of mutable lists by casting them to `List`.
+> To prevent unwanted modifications, you can obtain read-only views of mutable lists by assigning them to a `List`.
 > ```kotlin
 >     val numbers: MutableList<Int> = mutableListOf(1, 2, 3)
 >     val numbersLocked: List<Int> = numbers
 > ```
+> This is also called **casting**.
 > 
 {type="tip"}
 
@@ -60,36 +61,36 @@ fun main() {
 //sampleStart
     val readOnlyNumbers = listOf(1, 2, 3)
     println("The first item in the list is: ${readOnlyNumbers[0]}")
-    //The first element of the list is: 1
+    // The first element of the list is: 1
 //sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-list-access"}
 
-To get the first or last item in a list, use [`first()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/first.html)
-and [`last()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/last.html) functions respectively.
+To get the first or last item in a list, use [`.first()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/first.html)
+and [`.last()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/last.html) functions respectively.
 
 ```kotlin
 fun main() { 
 //sampleStart
     val readOnlyNumbers = listOf(1, 2, 3)
     println("The first item in the list is: ${readOnlyNumbers.first()}")
-    //The first item in the list is: 1
+    // The first item in the list is: 1
 //sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-list-first"}
 
-> [`first()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/first.html) and [`last()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/last.html)
+> [`.first()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/first.html) and [`.last()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/last.html)
 > functions are examples of **extension** functions. To call an extension function on an object, write the function name 
 > after the object appended with a period `.` 
 > 
 > For more information about extension functions, see [Extension functions](extensions.md#extension-functions).
-> For the purposes of this tour, you only need to know how to call them.
+> For the purposes of this tour, you only need to know how to call them. 
 > 
-{ type = "note" }
+{type="note"}
 
-To get the number of items in a list, use the [count()](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/count.html)
+To get the number of items in a list, use the [`.count()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/count.html)
 function:
 
 ```kotlin
@@ -97,7 +98,7 @@ fun main() {
 //sampleStart
     val readOnlyNumbers = listOf(1, 2, 3)
     println("This list has ${readOnlyNumbers.count()} items")
-    //This list has 3 items
+    // This list has 3 items
 //sampleEnd
 }
 ```
@@ -110,24 +111,24 @@ fun main() {
 //sampleStart
     val readOnlyNumbers = listOf(1, 2, 3)
     println(2 in readOnlyNumbers)
-    //true
+    // true
 //sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-list-in"}
 
-To add or remove items from a mutable list, use [`add()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/add.html)
-and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
+To add or remove items from a mutable list, use [`.add()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/add.html)
+and [`.remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
 
 ```kotlin
 fun main() { 
 //sampleStart
     val numbers: MutableList<Int> = mutableListOf(1, 2, 3)
-    numbers.add(4)    //Add 4 to the list
-    println(numbers)  //[1, 2, 3, 4]
+    numbers.add(4)    // Add 4 to the list
+    println(numbers)  // [1, 2, 3, 4]
     
-    numbers.remove(4) //Remove the first 4 from the list
-    println(numbers)  //[1, 2, 3]
+    numbers.remove(4) // Remove the first 4 from the list
+    println(numbers)  // [1, 2, 3]
 //sampleEnd
 }
 ```
@@ -147,18 +148,18 @@ within angled brackets `<>` after the set declaration.
 ```kotlin
 fun main() {
 //sampleStart
-    val readOnlyFruit = setOf("apple", "banana", "cherry", "cherry") //Read-only set
+    val readOnlyFruit = setOf("apple", "banana", "cherry", "cherry") // Read-only set
     val fruit: MutableSet<String> =
-        mutableSetOf("apple", "banana", "cherry", "cherry")          //Mutable set with explicit type declaration
+        mutableSetOf("apple", "banana", "cherry", "cherry")          // Mutable set with explicit type declaration
     
     println(readOnlyFruit)
-    //[apple, banana, cherry]
+    // [apple, banana, cherry]
 //sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-sets-declaration"}
 
-You can see in the example above that because sets only contain unique elements, the duplicate `"cherry"` item is dropped.
+You can see in the previous example that because sets only contain unique elements, the duplicate `"cherry"` item is dropped.
 
 > To prevent unwanted modifications, obtain read-only views of mutable sets by casting them to `Set`.
 > ```kotlin
@@ -168,9 +169,11 @@ You can see in the example above that because sets only contain unique elements,
 >
 {type="tip"}
 
-As sets are **unordered**, you can't access an item at a particular index.
+> As sets are **unordered**, you can't access an item at a particular index.
+> 
+{type="note"}
 
-To get the number of items in a set, use the [`count()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/count.html)
+To get the number of items in a set, use the [`.count()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/count.html)
 function:
 
 ```kotlin
@@ -178,7 +181,7 @@ fun main() {
 //sampleStart
     val readOnlyFruit = setOf("apple", "banana", "cherry", "cherry")
     println("This set has ${readOnlyFruit.count()} items")
-    //This set has 3 items
+    // This set has 3 items
 //sampleEnd
 }
 ```
@@ -197,18 +200,18 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-set-in"}
 
-To add or remove items from a mutable set, use [`add()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/add.html)
-and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
+To add or remove items from a mutable set, use [`.add()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/add.html)
+and [`.remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
 
 ```kotlin
 fun main() { 
 //sampleStart
     val fruit: MutableSet<String> = mutableSetOf("apple", "banana", "cherry", "cherry")
-    fruit.add("dragonfruit")    //Add "dragonfruit" to the set
-    println(fruit)              //[apple, banana, cherry, dragonfruit]
+    fruit.add("dragonfruit")    // Add "dragonfruit" to the set
+    println(fruit)              // [apple, banana, cherry, dragonfruit]
     
-    fruit.remove("dragonfruit") //Remove "dragonfruit" from the set
-    println(fruit)              //[apple, banana, cherry]
+    fruit.remove("dragonfruit") // Remove "dragonfruit" from the set
+    println(fruit)              // [apple, banana, cherry]
 //sampleEnd
 }
 ```
@@ -225,14 +228,15 @@ use the [`mutableMapOf()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.c
 When creating maps, Kotlin can sometimes infer the type of items stored. To declare the type explicitly, add the types
 of the keys and values within angled brackets `<>` after the map declaration.
 
-The easiest way to create maps is to use the [`to`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/to.html) function:
+The easiest way to create maps is to use [`to`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/to.html) between each 
+key and its related value:
 
-```kotlin
+```kotli
 fun main() {
 //sampleStart
-    val readOnlyAccountBalances = mapOf(1 to 100, 2 to 100, 3 to 100) //Read only map
+    val readOnlyAccountBalances = mapOf(1 to 100, 2 to 100, 3 to 100) // Read-only map
     val accountBalances: MutableMap<Int, Int> =
-        mutableMapOf(1 to 100, 2 to 100, 3 to 100)                    //Mutable map with explicit type declaration
+        mutableMapOf(1 to 100, 2 to 100, 3 to 100)                    // Mutable map with explicit type declaration
 //sampleEnd
 }
 ```
@@ -260,7 +264,7 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-map-access"}
 
-To get the number of items in a map, use the [`count()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/count.html)
+To get the number of items in a map, use the [`.count()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/count.html)
 function:
 
 ```kotlin
@@ -274,24 +278,24 @@ fun main() {
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-map-count"}
 
-To add or remove items from a mutable map, use [`put()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/put.html)
-and [`remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
+To add or remove items from a mutable map, use [`.put()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/put.html)
+and [`.remove()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/remove.html) functions respectively.
 
 ```kotlin
 fun main() { 
 //sampleStart
     val accountBalances: MutableMap<Int, Int> = mutableMapOf(1 to 100, 2 to 100, 3 to 100)
-    accountBalances.put(4, 100)  //Add key 4 with value 100 to the list
-    println(accountBalances)     //{1=100, 2=100, 3=100, 4=100}
+    accountBalances.put(4, 100)  // Add key 4 with value 100 to the list
+    println(accountBalances)     // {1=100, 2=100, 3=100, 4=100}
     
-    accountBalances.remove(4)    //Remove the key 4 from the list
-    println(accountBalances)     //{1=100, 2=100, 3=100}
+    accountBalances.remove(4)    // Remove the key 4 from the list
+    println(accountBalances)     // {1=100, 2=100, 3=100}
 //sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-map-put-remove"}
 
-To check if a specific key is already included in a map, use the [`containsKey()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/contains-key.html)
+To check if a specific key is already included in a map, use the [`.containsKey()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/contains-key.html)
 function:
 
 ```kotlin
@@ -313,13 +317,22 @@ fun main() {
 //sampleStart
     val readOnlyAccountBalances = mapOf(1 to 100, 2 to 100, 3 to 100)
     println(readOnlyAccountBalances.keys)
-    //[1, 2, 3]
+    // [1, 2, 3]
     println(readOnlyAccountBalances.values)
-    //[100, 100, 100]
+    // [100, 100, 100]
 //sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-map-keys-values"}
+
+> [`keys`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/keys.html) and [`values`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/values.html)
+> are examples of **properties** of an object. To access the property of an object, write the property name
+> after the object appended with a period `.`
+>
+> Properties are discussed in more detail in the [Classes](kotlin-tour-classes-part-1.md) chapter.
+> At this point in the tour, you only need to know how to access them.
+>
+{type="note"}
 
 To check that a key or value is in a map, use the [`in`](operator-overloading.md#in-operator) operator:
 
@@ -352,7 +365,7 @@ are in total.
 fun main() {
     val greenNumbers = listOf(1, 4, 23)
     val redNumbers = listOf(17, 2)
-    //Write your code here
+    // Write your code here
 }
 ```
 {validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-collections-exercise-1"}
@@ -377,7 +390,7 @@ to check whether the requested protocol is supported or not (`isSupported` must 
 fun main() {
     val SUPPORTED = setOf("HTTP", "HTTPS", "FTP")
     val requested = "smtp"
-    val isSupported = //Write your code here
+    val isSupported = // Write your code here
         println("Support for $requested: $isSupported")
 }
 ```
@@ -385,7 +398,7 @@ fun main() {
 
 <deflist collapsible="true">
     <def title="Hint">
-        Make sure that you check the requested protocol in upper case. You can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/uppercase.html"><code>uppercase()</code></a>
+        Make sure that you check the requested protocol in upper case. You can use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/uppercase.html"><code>.uppercase()</code></a>
 function to help you with this.
     </def>
 </deflist>
@@ -408,7 +421,7 @@ number.
 |---|---|
 ```kotlin
 fun main() {
-    val number2word = //Write your code here
+    val number2word = // Write your code here
     val n = 2
     println("$n is spelt as '${<Write your code here >}'")
 }

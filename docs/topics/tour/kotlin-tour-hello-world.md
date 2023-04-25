@@ -54,14 +54,15 @@ fun main() {
 
 > Variables can be declared outside the `main()` function at the beginning of your program. Variables declared in this way
 > are said to be declared at **top level**.
-{type="info"}
+> 
+{type="tip"}
 
 As `customers` is a mutable variable, its value can be reassigned after declaration.
 
 > We recommend that you declare all variables as read-only (`val`) by default. Declare mutable variables (`var`) only if 
 > necessary.
 > 
-{type= "note"}
+{type="note"}
 
 ## String templates
 

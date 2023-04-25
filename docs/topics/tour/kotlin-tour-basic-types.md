@@ -40,7 +40,8 @@ fun main() {
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-basic-types-arithmetic"}
 
 > `+=`, `-=`, `*=`, `/=`, and `%=` are augmented assignment operators. For more information, see [Augmented assignments](operator-overloading.md#augmented-assignments).
-{type="info"}
+> 
+{type="tip"}
 
 In total, Kotlin has the following basic types:
 
