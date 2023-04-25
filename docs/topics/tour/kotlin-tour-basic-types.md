@@ -1,7 +1,6 @@
 [//]: # (title: Basic types)
 
 <microformat>
-    <p>This is the second part of the Kotlin tour:</p>
     <p><img src="icon-1-done.svg" width="20" alt="First step" /> <a href="kotlin-tour-hello-world.md">Hello world</a><br />
         <img src="icon-2.svg" width="20" alt="Second step" /> <strong>Basic types</strong><br />
         <img src="icon-3-todo.svg" width="20" alt="Third step" /> <a href="kotlin-tour-collections.md">Collections</a><br />
@@ -11,10 +10,14 @@
         <img src="icon-7-todo.svg" width="20" alt="Final step" /> <a href="kotlin-tour-null-safety.md">Null safety</a></p>
 </microformat>
 
-Kotlin has data types that tell the compiler what functions and properties an object has.
+Every object in Kotlin has a data type. Data types are important because they tell the compiler what you are allowed to 
+do with that object. In other words, what functions and properties an object has.
 
-In the last chapter, Kotlin's powerful type inference inferred from the previous example that `customers` has type: [`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/).
-As `Int` is a numerical data type, you can perform arithmetic operations with `customers`:
+In the last chapter, Kotlin was able to tell in the previous example that `customers` has type: [`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/).
+Kotlin's ability to **infer** the data type of an object is called **type inference**.
+
+In the previous example, `customers` is assigned an integer value. From this, Kotlin infers that `customers` has numerical
+data type: `Int`. As a result, the compiler knows that you can perform arithmetic operations with `customers`:
 
 ```kotlin
 fun main() {
@@ -45,7 +48,7 @@ In total, Kotlin has the following basic types:
 |--|--|
 | Integers | `Byte`, `Short`, `Int`, `Long` |
 | Unsigned integers | `UByte`, `UShort`, `UInt`, `ULong` |
-| Floating-point | `Float`, `Double` |
+| Floating-point numbers | `Float`, `Double` |
 | Booleans | `Boolean` |
 | Characters | `Char` |
 | Strings | `String` |
@@ -77,7 +80,7 @@ Now that you know how to declare basic types, it's time to learn about [collecti
 ## Practice
 
 ### Exercise {initial-collapse-state="collapsed"}
-Declare the correct type for each variable listed below:
+Explicitly declare the correct type for each variable listed below:
 
 |---|---|
 ```kotlin
