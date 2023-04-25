@@ -357,7 +357,7 @@ that you can use in your programs.
 ## Practice
 
 ### Exercise 1 {initial-collapse-state="collapsed"}
-You have a list of “green” numbers and a list of “red” numbers. Complete the code below to print how many numbers there
+You have a list of “green” numbers and a list of “red” numbers. Complete the code to print how many numbers there
 are in total.
 
 |---|---|

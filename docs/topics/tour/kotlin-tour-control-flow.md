@@ -11,16 +11,22 @@
         <img src="icon-7-todo.svg" width="20" alt="Final step" /> <a href="kotlin-tour-null-safety.md">Null safety</a></p>
 </microformat>
 
-Like other programming languages, Kotlin is capable of checking conditional expressions and creating loops.
+Like other programming languages, Kotlin is capable of making decisions based on whether a piece of code is evaluated to
+be true. Such pieces of code are called **conditional expressions**. Kotlin is also able to create and iterate
+through loops.
 
 ## Conditional expressions
 
-Kotlin provides `if` and `when` for checking conditional expressions. If you have to choose between the two, we recommend
-using `when` as it leads to more robust and safer programs.
+Kotlin provides `if` and `when` for checking conditional expressions. 
+
+> If you have to choose between `if` and `when`, we recommend using `when` as it leads to more robust and safer programs.
+> 
+{type="note"}
 
 ### If
 
-To use `if`, add the conditional expression within parentheses and the action to take if the result is true within curly braces `{}`:
+To use `if`, add the conditional expression within parentheses `()` and the action to take if the result is true within 
+curly braces `{}`:
 
 ```kotlin
 fun main() {
@@ -35,7 +41,7 @@ fun main() {
     }
 
     println(d)
-    //1
+    // 1
 //sampleEnd
 }
 ```
@@ -61,8 +67,8 @@ fun main() {
 Use `when` when you have a conditional expression with multiple branches.
 `when` can be used either as a statement or as an expression.
 
-Below is an example of using `when` as a statement:
-* Place the conditional expression within parentheses and the actions to take
+Here is an example of using `when` as a statement:
+* Place the conditional expression within parentheses `()` and the actions to take
 within curly braces `{}`. 
 * Use `->` in each branch to separate each condition from each action.
 
@@ -72,19 +78,21 @@ fun main() {
     val obj = "Hello"
 
     when (obj) {
-        "1" -> println("One")          //Checks whether obj equals to "One"
-        "Hello" -> println("Greeting") //Checks whether obj equals to "Hello"
-        else -> println("Unknown")     //Default statement
+        "1" -> println("One")          // Checks whether obj equals to "One"
+        "Hello" -> println("Greeting") // Checks whether obj equals to "Hello"
+        else -> println("Unknown")     // Default statement
     }
 //sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-when-statement-kotlin"}
 
-Note that all branch conditions are checked sequentially until one of them is satisfied. So only the first suitable 
-branch is executed.
+> Note that all branch conditions are checked sequentially until one of them is satisfied. So only the first suitable 
+> branch is executed.
+>
+{type="note"}
 
-Below is an example of using `when` as an expression. The `when` syntax is assigned immediately to a variable.
+Here is an example of using `when` as an expression. The `when` syntax is assigned immediately to a variable.
 
 ```kotlin
 fun main() {
@@ -92,9 +100,9 @@ fun main() {
     val obj = "Hello"    
     
     val result = when (obj) {                                     
-        "1" -> "One"            //If obj equals "1", sets result to "one"
-        "Hello" -> "Greeting"   //If obj equals "Hello", sets result to "Greeting"
-        else -> "Unknown"       //Sets result to "Unknown" if no previous condition is satisfied
+        "1" -> "One"            // If obj equals "1", sets result to "one"
+        "Hello" -> "Greeting"   // If obj equals "Hello", sets result to "Greeting"
+        else -> "Unknown"       // Sets result to "Unknown" if no previous condition is satisfied
     }
     println(result)
 //sampleEnd
@@ -114,10 +122,10 @@ fun main() {
     val temp = 18
 
     val description = when {
-        temp < 0 -> "very cold"   //If temp <0 is true, sets description to "very cold"
-        temp < 10 -> "a bit cold" //If temp < 10 is true, sets description to "a bit cold"
-        temp < 20 -> "warm"       //If temp < 20 is true, sets description to "warm"
-        else -> "hot"             //Sets description to "hot" if no previous condition is satisfied
+        temp < 0 -> "very cold"   // If temp <0 is true, sets description to "very cold"
+        temp < 10 -> "a bit cold" // If temp < 10 is true, sets description to "a bit cold"
+        temp < 20 -> "warm"       // If temp < 20 is true, sets description to "warm"
+        else -> "hot"             // Sets description to "hot" if no previous condition is satisfied
     }
     println(description)
 //sampleEnd
@@ -127,7 +135,7 @@ fun main() {
 
 ## Ranges
 
-Before we talk about loops, it's useful to know how to construct ranges for loops to iterate over.
+Before talking about loops, it's useful to know how to construct ranges for loops to iterate over.
 
 The most common way to create a range in Kotlin is to use the `..` operator. For example, `1..4` is equivalent to `1, 2, 3, 4`.
 
@@ -149,9 +157,11 @@ values and perform an action. `while` is useful to continue an action until a pa
 
 ### For
 
-Using our new knowledge of ranges, we can create a `for` loop that iterates over numbers 1 to 5 and prints the number each time.
+Using your new knowledge of ranges, you can create a `for` loop that iterates over numbers 1 to 5 and prints the number 
+each time.
 
-Place the iterator and range within parentheses `()` with keyword `in`. Add the action you want to complete within curly braces `{}`.
+Place the iterator and range within parentheses `()` with keyword `in`. Add the action you want to complete within curly
+braces `{}`:
 
 ```kotlin
 fun main() {
@@ -159,7 +169,7 @@ fun main() {
     for (number in 1..5) { // number is the iterator and 1..5 is the range
         println(number)
     }
-    //1 2 3 4 5
+    // 1 2 3 4 5
 //sampleEnd
 }
 ```
@@ -175,9 +185,9 @@ fun main() {
     for (cake in cakes) {
         println("Yummy, it's a $cake cake!")
     }
-    //Yummy, it's a carrot cake!
-    //Yummy, it's a cheese cake!
-    //Yummy, it's a chocolate cake!
+    // Yummy, it's a carrot cake!
+    // Yummy, it's a cheese cake!
+    // Yummy, it's a chocolate cake!
 //sampleEnd
 }
 ```
@@ -193,8 +203,8 @@ In the first use case (`while`):
 * Declare the conditional expression for your while loop to continue within parentheses `()`. 
 * Add the action you want to complete within curly braces `{}`.
 
-> In the below examples, we use the [increment operator](operator-overloading.md#increments-and-decrements) `++` to
-> increment the value of our `cakesEaten` variable.
+> The following examples use the [increment operator](operator-overloading.md#increments-and-decrements) `++` to
+> increment the value of the `cakesEaten` variable.
 >
 {type="note"}
 
@@ -240,7 +250,7 @@ Now that you know the fundamentals of Kotlin control flow, it's time to learn ho
 ## Practice
 
 ### Exercise 1 {initial-collapse-state="collapsed"}
-Using a `when` expression, update the below program so that when you input the names of GameBoy buttons, the below actions
+Using a `when` expression, update the following program so that when you input the names of GameBoy buttons, the actions
 are printed to output. 
 
 | **Button** | **Action**             |
@@ -257,7 +267,7 @@ fun main() {
     val button = readln()
 
     println(
-        //Write your code here
+        // Write your code here
     )
 }
 ```
@@ -356,7 +366,7 @@ divisible by five with the word "buzz". Any number divisible by both 3 and 5 mus
 |---|---|
 ```kotlin
 fun main() {
-    //Write your code here
+    // Write your code here
 }
 ```
 {validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-control-flow-exercise-3"}
@@ -394,7 +404,7 @@ You have a list of words. Using `for` and `if`, print only those words that star
 ```kotlin
 fun main() {
     val words = listOf("dinosaur", "limousine", "magazine", "language")
-    //Write your code here
+    // Write your code here
 }
 ```
 {validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-control-flow-exercise-4"}
