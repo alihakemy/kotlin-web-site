@@ -11,7 +11,7 @@
         <img src="icon-7-todo.svg" width="20" alt="Final step" /> <a href="kotlin-tour-null-safety.md">Null safety</a></p>
 </microformat>
 
-Below is a simple program that prints "Hello, world!":
+Here is a simple program that prints "Hello, world!":
 
 ```kotlin
 fun main() {
@@ -22,12 +22,13 @@ fun main() {
 
 In Kotlin:
 * `fun` is used to declare a function
-* the entry point is the `main` function
-* function arguments are written within parentheses `()`
+* the starting point of your program is the `main()` function
 * the body of a function is written within curly braces `{}`
 * [`println()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/println.html) and [`print()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.io/print.html) functions print their arguments to standard output
 
-Functions are discussed in more detail in a couple of chapters. Until then, all examples use the `main` function.
+> Functions are discussed in more detail in a couple of chapters. Until then, all examples use the `main()` function.
+> 
+{type="note"}
 
 ## Variables
 
@@ -40,25 +41,27 @@ To assign a value, use the assignment operator `=`.
 ```kotlin
 fun main() { 
 //sampleStart
-    val popcorn = 5
-    val hotdog = 7
-    var customers = 10
+    val popcorn = 5    // There are 5 boxes of popcorn
+    val hotdog = 7     // There are 7 hotdogs
+    var customers = 10 // There are 10 customers in the queue
     
-    //Some customers leave the queue
+    // Some customers leave the queue
     customers = 8
 //sampleEnd
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-variables"}
 
-> Variables can be declared at top level as well as within functions.
+> Variables can be declared outside the `main()` function at the beginning of your program. Variables declared in this way
+> are said to be declared at **top level**.
 {type="info"}
 
 As `customers` is a mutable variable, its value can be reassigned after declaration.
 
 > We recommend that you declare all variables as read-only (`val`) by default. Declare mutable variables (`var`) only if 
 > necessary.
-{type="info"}
+> 
+{type= "note"}
 
 ## String templates
 

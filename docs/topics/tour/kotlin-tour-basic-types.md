@@ -24,14 +24,14 @@ fun main() {
 //sampleStart
     var customers = 10
 
-    //Some customers leave the queue
+    // Some customers leave the queue
     customers = 8
 
-    customers = customers + 3 //Example of addition: 11
-    customers += 7            //Example of addition: 18
-    customers -= 3            //Example of subtraction: 15
-    customers *= 2            //Example of multiplication: 30
-    customers /= 3            //Example of division: 10
+    customers = customers + 3 // Example of addition: 11
+    customers += 7            // Example of addition: 18
+    customers -= 3            // Example of subtraction: 15
+    customers *= 2            // Example of multiplication: 30
+    customers /= 3            // Example of division: 10
 
     println(customers) // 10
 //sampleEnd
@@ -66,7 +66,7 @@ fun main() {
     val d: Int               // Variable declared without initialization
     d = 3                    // Variable initialized
     
-    val e: String = "hello"  //Variable explicitly typed and initialized
+    val e: String = "hello"  // Variable explicitly typed and initialized
 
     println(d)               // Variable can be read because it has been initialized
     println(e)
