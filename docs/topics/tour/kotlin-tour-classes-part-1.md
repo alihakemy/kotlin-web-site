@@ -67,7 +67,7 @@ fun main() {
     val contact = Contact(1, "mary@gmail.com")
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-class-create-instance-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-class-create-instance"}
 
 In the above example:
 * `Contact` is a class.
@@ -94,7 +94,7 @@ fun main() {
     //jane@gmail.com
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-access-property-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-access-property"}
 
 > To concatenate the value of a property as part of a string, you can use string templates (`$`).
 > For example:
@@ -125,7 +125,7 @@ fun main() {
     //1
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-member-function-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-member-function"}
 
 ## Data classes
 
@@ -169,7 +169,7 @@ fun main() {
     //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-print-string-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-data-classes-print-string"}
 
 This is particularly useful when debugging or creating logs.
 
@@ -193,7 +193,7 @@ fun main() {
     //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-compare-instances-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-data-classes-compare-instances"}
 
 ### Copy instance
 
@@ -220,7 +220,7 @@ fun main() {
     //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-data-classes-copy-instance-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-data-classes-copy-instance"}
 
 Creating a copy of an instance is safer than modifying the original instance because any code that relies on the
 original instance isn't affected by the copy and what you do with it.

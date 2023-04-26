@@ -45,7 +45,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-if-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-if"}
 
 There is no ternary operator `condition ? then : else` in Kotlin. Instead, `if` can be used as an expression. When using
 `if` as an expression, there are no curly braces `{}`:
@@ -60,7 +60,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-if-expression-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-if-expression"}
 
 ### When
 
@@ -85,7 +85,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-when-statement-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-when-statement"}
 
 > Note that all branch conditions are checked sequentially until one of them is satisfied. So only the first suitable 
 > branch is executed.
@@ -108,7 +108,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-when-expression-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-when-expression"}
 
 If when is used as an expression, the else branch is mandatory, unless the compiler can detect that all possible cases 
 are covered by the branch conditions.
@@ -131,7 +131,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-when-expression-boolean-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-when-expression-boolean"}
 
 ## Ranges
 
@@ -173,7 +173,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-for-loop-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-for-loop"}
 
 Collections can also be iterated over by loops:
 
@@ -191,7 +191,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-for-collection-loop-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-for-collection-loop"}
 
 ### While
 
@@ -219,7 +219,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-while-loop-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-while-loop"}
 
 In the second use case (`do-while`):
 * Define the action you want to complete within curly braces `{}` with the keyword `do`.
@@ -241,7 +241,7 @@ fun main() {
 //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-while-do-loop-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-while-do-loop"}
 
 For more information and examples of conditional expressions and loops, see [Conditions and loops](control-flow.md).
 

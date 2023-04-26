@@ -51,7 +51,7 @@ fun main() {
     println(strLength(nullable))                          // Throws a compiler error
 }
 ```
-{kotlin-runnable="true" validate="false" kotlin-min-compiler-version="1.3" id="tour-nullable-type-kotlin"}
+{kotlin-runnable="true" validate="false" kotlin-min-compiler-version="1.3" id="kotlin-tour-nullable-type"}
 
 > `length` is a property of the [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/) class that 
 > contains the number of characters within a string.
@@ -78,7 +78,7 @@ fun main() {
     // Empty or null string
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-check-nulls-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-check-nulls"}
 
 ## Use safe calls
 
@@ -97,7 +97,7 @@ fun main() {
     // null
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-safe-call-property-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-safe-call-property"}
 
 > Safe calls can be chained so that if any property of an object contains a null value, then `null` is returned without 
 > an error being thrown. For example:
@@ -120,7 +120,7 @@ fun main() {
     // null
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-safe-call-function-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-safe-call-function"}
 
 ## Use Elvis operator
 
@@ -139,7 +139,7 @@ fun main() {
     // 0
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-elvis-operator-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-elvis-operator"}
 
 For more information about null safety in Kotlin, see [Null safety](null-safety.md).
 

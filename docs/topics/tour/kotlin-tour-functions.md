@@ -36,7 +36,7 @@ fun main() {
     // 3
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-simple-function-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-simple-function"}
 
 > We recommend in our [coding conventions](coding-conventions.md#function-names) that you name functions starting with 
 > a lowercase letter and use camel case with no underscores.
@@ -62,7 +62,7 @@ fun main() {
     //[Log] Hello
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-named-arguments-function-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-named-arguments-function"}
 
 ## Default parameter values
 
@@ -83,7 +83,7 @@ fun main() {
     //[Log] Hello
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-default-param-function-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-default-param-function"}
 
 > You can skip specific parameters with default values, rather than omitting them all. However, after the 
 > first skipped parameter, you must name all subsequent parameters.
@@ -110,7 +110,7 @@ fun main() {
     // Hello
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-unit-function-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-unit-function"}
 
 ## Single-expression functions
 
@@ -126,7 +126,7 @@ fun main() {
     // 3
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-simple-function-before-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-simple-function-before"}
 
 You can remove the curly braces `{}` and declare the function body using the assignment operator `=`. And due to Kotlin's
 type inference, you can also omit the return type. The `sum()` function then becomes one line:
@@ -139,7 +139,7 @@ fun main() {
     // 3
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-simple-function-after-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-simple-function-after"}
 
 > Omitting the return type is only possible when your function has no body (`{}`). Unless your function's return type
 > is `Unit`.
@@ -297,7 +297,7 @@ fun main() {
     // HELLO
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-variable-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-lambda-variable"}
 
 ### Pass to another function
 
@@ -319,7 +319,7 @@ fun main() {
     //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-filter-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-lambda-filter"}
 
 The `.filter()` function accepts a lambda expression as a predicate:
 * `{ x -> x > 0 }` takes each element of the list and returns only those that are positive.
@@ -347,7 +347,7 @@ fun main() {
     //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-map-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-lambda-map"}
 
 The `map()` function accepts a lambda expression as a predicate:
 * `{ x -> x * 2 }` takes each element of the list and returns that element multiplied by 2
@@ -378,7 +378,7 @@ fun main() {
     // HELLO
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-function-type-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-lambda-function-type"}
 
 If your lambda has no parameters then the parentheses `()` are left empty. For example: `() -> Unit`
 
@@ -417,7 +417,7 @@ fun main() {
     // Total time is 1680 secs
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-return-from-function-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-lambda-return-from-function"}
 
 ### Invoke separately
 
@@ -432,7 +432,7 @@ fun main() {
     //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-lambda-standalone-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-lambda-standalone"}
 
 ### Trailing lambdas
 
@@ -454,7 +454,7 @@ fun main() {
     //sampleEnd
 }
 ```
-{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-trailing-lambda-kotlin"}
+{kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-trailing-lambda"}
 
 For more information on lambda expressions, see [Lambda expressions and anonymous functions](lambdas.md#lambda-expressions-and-anonymous-functions).
 
