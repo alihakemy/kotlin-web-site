@@ -231,7 +231,7 @@ of the keys and values within angled brackets `<>` after the map declaration.
 The easiest way to create maps is to use [`to`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/to.html) between each 
 key and its related value:
 
-```kotli
+```kotlin
 fun main() {
 //sampleStart
     val readOnlyAccountBalances = mapOf(1 to 100, 2 to 100, 3 to 100) // Read-only map

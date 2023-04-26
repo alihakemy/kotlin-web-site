@@ -395,7 +395,7 @@ You have a list of words. Using `for` and `if`, print only those words that star
 
 <deflist collapsible="true">
     <def title="Hint">
-        Use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/starts-with.html"> <code>startsWith()</code>
+        Use the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/starts-with.html"> <code>.startsWith()</code>
         </a> function for <code>String</code> type. 
     </def>
 </deflist>
