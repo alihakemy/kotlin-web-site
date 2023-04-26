@@ -1,4 +1,4 @@
-[//]: # (title: Classes I)
+[//]: # (title: Classes)
 
 <microformat>
     <p>This is the sixth part of the Kotlin tour:</p>
@@ -41,10 +41,10 @@ is created.
 You can declare properties without `val` or `var` within parentheses but these properties are not accessible after an 
 instance has been created.
 
-> * The content contained within parentheses `()` is called the class header.
+> * The content contained within parentheses `()` is called the **class header**.
 > * You can use a [trailing comma](coding-conventions.md#trailing-commas) when declaring class properties.
 >
-{type="tip"}
+{type="note"}
 
 Just like with function parameters, class properties can have default values:
 ```kotlin
@@ -70,10 +70,10 @@ fun main() {
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-class-create-instance-kotlin"}
 
 In the above example:
-* `Contact` is a class
-* `contact` is an instance of the `Contact` class
-* `id` and `email` are properties
-* `id` and `email` are used with the default constructor to create `contact`
+* `Contact` is a class.
+* `contact` is an instance of the `Contact` class.
+* `id` and `email` are properties.
+* `id` and `email` are used with the default constructor to create `contact`.
 
 Kotlin classes can have many constructors, including ones that you define yourself. To learn more about how to declare 
 multiple constructors, see [Constructors](classes.md#constructors).
@@ -87,16 +87,16 @@ class Contact(val id: Int, var email: String)
 
 fun main() {
     val contact = Contact(1, "mary@gmail.com")
-    println(contact.email)           //Prints the value of the property: email
+    println(contact.email)           // Prints the value of the property: email
     //mary@gmail.com
-    contact.email = "jane@gmail.com" //Updates the value of the property: email
-    println(contact.email)           //Prints the new value of the property: email
+    contact.email = "jane@gmail.com" // Updates the value of the property: email
+    println(contact.email)           // Prints the new value of the property: email
     //jane@gmail.com
 }
 ```
 {kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="tour-access-property-kotlin"}
 
-> To concatenate the value of a property as part of a string, you can use template expressions (`$`).
+> To concatenate the value of a property as part of a string, you can use string templates (`$`).
 > For example:
 > ```kotlin
 > println("Their email address is: ${contact.email}")
@@ -121,7 +121,7 @@ class Contact(val id: Int, var email: String) {
 
 fun main() {
     val contact = Contact(1, "mary@gmail.com")
-    contact.printId()           //Calls member function printId()
+    contact.printId()           // Calls member function printId()
     //1
 }
 ```
@@ -141,11 +141,11 @@ data class User(val name: String, val id: Int)
 
 The most useful predefined member functions of data classes are listed in the table below:
 
-| **Function**       | **Description**                                                                                                |
-|--------------------|----------------------------------------------------------------------------------------------------------------|
-| `toString()`       | Prints a readable string of the class instance and its properties.                                             |
-| `equals()` or `==` | Compares instances of a class.                                                                                 |
-| `copy()`           | Creates a class instance by copying another, potentially with some different properties.                       |
+| **Function**        | **Description**                                                                                                |
+|---------------------|----------------------------------------------------------------------------------------------------------------|
+| `.toString()`       | Prints a readable string of the class instance and its properties.                                             |
+| `.equals()` or `==` | Compares instances of a class.                                                                                 |
+| `.copy()`           | Creates a class instance by copying another, potentially with some different properties.                       |
 
 See the following sections for examples of how to use each function:
 * [Print as string](#print-as-string)
@@ -154,8 +154,8 @@ See the following sections for examples of how to use each function:
 
 ### Print as string
 
-To print a readable string of a class instance, you can explicitly call the `toString()` function, or use print functions 
-(`println()` and `print()`) which automatically call `toString()` for you:
+To print a readable string of a class instance, you can explicitly call the `.toString()` function, or use print functions 
+(`println()` and `print()`) which automatically call `.toString()` for you:
 
 ```kotlin
 data class User(val name: String, val id: Int)
@@ -164,8 +164,8 @@ fun main() {
     val user = User("Alex", 1)
     
     //sampleStart
-    println(user)            //Automatically uses toString() function so that output is easy to read
-    //User(name=Alex, id=1)
+    println(user)            // Automatically uses toString() function so that output is easy to read
+    // User(name=Alex, id=1)
     //sampleEnd
 }
 ```
@@ -175,7 +175,7 @@ This is particularly useful when debugging or creating logs.
 
 ### Compare instances
 
-To compare data class instances, use the equality operator (`==`):
+To compare data class instances, use the equality operator `==`:
 
 ```kotlin
 data class User(val name: String, val id: Int)
@@ -186,10 +186,10 @@ fun main() {
     val secondUser = User("Alex", 1)
     val thirdUser = User("Max", 2)
     
-    println("user == secondUser: ${user == secondUser}") //Compares user to second user
-    //user == secondUser: true
-    println("user == thirdUser: ${user == thirdUser}")   //Compares user to third user
-    //user == thirdUser: false
+    println("user == secondUser: ${user == secondUser}") // Compares user to second user
+    // user == secondUser: true
+    println("user == thirdUser: ${user == thirdUser}")   // Compares user to third user
+    // user == thirdUser: false
     //sampleEnd
 }
 ```
@@ -197,9 +197,9 @@ fun main() {
 
 ### Copy instance
 
-To create an exact copy of a data class instance, call the `copy()` function on the instance.
+To create an exact copy of a data class instance, call the `.copy()` function on the instance.
 
-To create a copy of a data class instance **and** change some properties, call the `copy()` function on the instance 
+To create a copy of a data class instance **and** change some properties, call the `.copy()` function on the instance 
 **and** add replacement values for properties as function parameters.
 
 ```kotlin
@@ -211,12 +211,12 @@ fun main() {
     val secondUser = User("Alex", 1)
     val thirdUser = User("Max", 2)
     
-    println(user.copy())       //Creates an exact copy of user
-    //User(name=Alex, id=1)
-    println(user.copy("Max"))  //Creates a copy of user with name: "Max"
-    //User(name=Max, id=1)
-    println(user.copy(id = 3)) //Creates a copy of user with id: 3
-    //User(name=Alex, id=3)
+    println(user.copy())       // Creates an exact copy of user
+    // User(name=Alex, id=1)
+    println(user.copy("Max"))  // Creates a copy of user with name: "Max"
+    // User(name=Max, id=1)
+    println(user.copy(id = 3)) // Creates a copy of user with id: 3
+    // User(name=Alex, id=3)
     //sampleEnd
 }
 ```
@@ -269,7 +269,7 @@ again, the main function demonstrates how you can use this class.
 
 <deflist collapsible="true">
     <def title="Hint">
-        Lists have an extension function called <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/random.html"><code>random()</code></a>
+        Lists have an extension function called <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/random.html"><code>.random()</code></a>
         that returns a random item within a list.
     </def>
 </deflist>
@@ -286,7 +286,7 @@ import kotlin.random.Random
 
 data class Employee(val name: String, var salary: Int)
 
-//Write your code here
+// Write your code here
 
 fun main() {
     val empGen = RandomEmployeeGenerator(10, 30)
