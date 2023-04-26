@@ -68,9 +68,9 @@ As `customers` is a mutable variable, its value can be reassigned after declarat
 
 It's useful to know how to print the contents of variables to standard output. You can do this with **string templates**. 
 You can use template expressions to access data stored in variables and other objects, and convert them into strings.
-A string value is a sequence of characters in double quotes (`"`). Template expressions always start with a dollar sign (`$`).
+A string value is a sequence of characters in double quotes `"`. Template expressions always start with a dollar sign `$`.
 
-To evaluate a piece of code in a template expression, place the code within curly braces `{}` after the dollar sign (`$`).
+To evaluate a piece of code in a template expression, place the code within curly braces `{}` after the dollar sign `$`.
 
 For example:
 
@@ -103,7 +103,7 @@ Complete the code below to make the program print `"Mary is 20 years old"` to st
 fun main() {
     val name = "Mary"
     val age = 20
-    //Write your code here
+    // Write your code here
 }
 ```
 {validate="false" kotlin-runnable="true" kotlin-min-compiler-version="1.3" id="kotlin-tour-hello-world-exercise"}
