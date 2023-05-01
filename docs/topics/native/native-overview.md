@@ -54,11 +54,13 @@ are pre-imported and included as Kotlin/Native libraries in the compiler package
 
 ## Sharing code between platforms
 
-[Multiplatform projects](multiplatform.md) allow sharing common Kotlin code between multiple platforms, including Android, iOS, JVM, JavaScript, and native.
-Multiplatform libraries provide required APIs for common Kotlin code and help develop shared parts of a project in
-Kotlin in one place and share it with some or all target platforms.
+[Kotlin Multiplatform](multiplatform.md) enables sharing common code across multiple platforms, including Android, iOS, JVM, web, and native.
+Multiplatform libraries provide the necessary APIs for common Kotlin code and help develop shared parts of a project in Kotlin 
+in one place, sharing it with some or all target platforms.
 
-You can use [Kotlin Multiplatform for mobile](https://kotlinlang.org/lp/mobile/) to create multiplatform mobile applications with code shared between Android and iOS.
+You can use [Kotlin Multiplatform for mobile](multiplatform-mobile-getting-started.md) to create multiplatform mobile applications with code shared between Android and iOS.
+
+[Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/), a JetBrains' declarative UI framework based on Kotlin and Jetpack Compose, allows sharing UIs across platforms – iOS, Android, desktop, and web.
 
 ## How to get started
 
@@ -69,7 +71,6 @@ New to Kotlin? Take a look at [Getting started with Kotlin](getting-started.md).
 Recommended documentation:
 
 * [Kotlin Multiplatform for mobile](multiplatform-mobile-getting-started.md)
-* [Multiplatform documentation](multiplatform-get-started.md)
 * [C interop](native-c-interop.md)
 * [Swift/Objective-C interop](native-objc-interop.md)
 
