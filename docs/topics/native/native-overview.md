@@ -60,7 +60,7 @@ in one place, sharing it with some or all target platforms.
 
 You can use [Kotlin Multiplatform for mobile](multiplatform-mobile-getting-started.md) to create multiplatform mobile applications with code shared between Android and iOS.
 
-[Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/), a JetBrains' declarative UI framework based on Kotlin and Jetpack Compose, allows sharing UIs across platforms – iOS, Android, desktop, and web.
+[Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/), a JetBrains' declarative UI framework based on Kotlin and [Jetpack Compose](https://developer.android.com/jetpack/compose), allows sharing UIs across platforms – iOS, Android, desktop, and web.
 
 ## How to get started
 
