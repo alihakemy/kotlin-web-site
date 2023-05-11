@@ -264,7 +264,7 @@ If the library doesn't publish non-legacy binaries yet, you're encouraged to rea
 
 _If you're a library author_: update to the latest Kotlin Gradle Plugin and ensure you've fixed deprecations outlined 
 in the previous [section](#deprecated-gradle-properties-for-hierarchical-structure-support) sections. Kotlin Team is eager
-to help the ecosystem migrate, so if you face any issues, don't hesitate to create an [issue in YouTrack](https://kotlin.in/issue).
+to help the ecosystem migrate, so if you face any issues, don't hesitate to create an [issue in YouTrack](https://kotl.in/issue).
 
 **When do the changes take effect?**
 
