@@ -252,7 +252,7 @@ the "legacy" libraries. If your project uses a dependency that was published in 
 will be issued:
 
 ```
-The dependency foo:bar:1.0 was published in the legacy mode. Support for such dependencies will be removed in the future
+The dependency group:artifact:1.0 was published in the legacy mode. Support for such dependencies will be removed in the future
 ```
 
 **What's the best practice now?**
