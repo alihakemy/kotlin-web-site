@@ -398,9 +398,18 @@ In case you're using a different way of applying plugins, refer to [the Gradle D
 
 2. Move your source files from `main`/`test` folder to `jsMain`/`jsTest` folder in the same directory
 
-3. Change dependencies declaration from `api`/`implementation`/etc. to `jsApi`/`jsImplementation`/etc. Alternatively, you
-or can use the `sourceSets`-block and configure dependencies of respective source set (`jsMain` for production dependencies, `jsTest` 
-for test dependencies) - refer to the Kotlin Multiplatform Plugin [documentation](https://kotlinlang.org/docs/multiplatform-add-dependencies.html)
+3. Adjust dependencies declaration:
+
+We recommend using `sourceSets`-block and configure dependencies of respective source set: `jsMain` for
+production dependencies, `jsTest` for test dependencies. See the example below and refer for details to the Kotlin 
+Multiplatform Plugin [documentation](https://kotlinlang.org/docs/multiplatform-add-dependencies.html)
+
+If you'd like to keep your dependencies declared in a top-level block:   
+
+`api("group:artifact:1.0")` -> `add("jsMainApi", "group:artifact:1.0")`
+
+Note that in this case, you have to make sure that the top-level `dependencies`-block comes **after** `kotlin`-block,
+otherwise you'll get an error like this: `Configuration with name 'jsMainApi' not found.`
 
 <table header-style="top">
 <tr>
@@ -439,17 +448,12 @@ plugins {
     kotlin("multiplatform") version "1.9.0"
 }
 
-dependencies {
-    // Option #1: add 'js'-prefix to dependencies declaration
-    jsTestImplementation(kotlin("test"))
-}
-
 kotlin {
     js {
         // ...
     }
     
-    // Option #2: declare dependencies in sourceSets-block:
+    // Option #1: declare dependencies in sourceSets-block:
     sourceSets {
         val jsMain by getting {
             dependencies {
@@ -458,6 +462,11 @@ kotlin {
             }
         }
     }
+}
+
+dependencies {
+   // Option #2: keep the top-level dependencies block
+   add("jsTestImplementation", kotlin("test"))
 }
 ```
 
@@ -469,4 +478,3 @@ kotlin {
 were referring to low-level Gradle entities (tasks, configurations) by names, you have to adjust the names, usually
 by adding `js`-prefix
     * Example: `browserTest`-task can be found under name `jsBrowserTest`
-`
