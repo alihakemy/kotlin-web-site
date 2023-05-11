@@ -270,8 +270,7 @@ to help the ecosystem migrate, so if you face any issues, don't hesitate to crea
 
 * Kotlin 1.9.0: warning on using legacy dependencies
 * Kotlin 1.9.20: error on using legacy dependencies
-* Kotlin >1.9.20: support for legacy dependencies is dropped. Symbols from such dependencies won't be read by the compiler,
-essentially making those dependencies silently ignored
+* Kotlin >1.9.20: support for legacy dependencies is dropped, depending on such libraries might cause build failures
 
 <anchor name="compilation-source-deprecation"></anchor>
 ## Deprecated API for adding Kotlin Source Sets to Kotlin Compilation directly
