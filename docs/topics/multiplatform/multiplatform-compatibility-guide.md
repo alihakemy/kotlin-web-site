@@ -298,10 +298,10 @@ kotlin {
 
 **What's the best practice now?**
 
-For all intents and purposes, `KotlinCompilation.source(foo)` is equivalent to adding a `dependsOn` to `foo` from the
-default source set of the `KotlinCompilation`. In the general case, the replacement is 
-`KotlinCompilation.defaultSourceSet.dependsOn(foo)`, but often it is more readable to refer to that source set directly
-via `by getting`.
+For all intents and purposes, `KotlinCompilation.source(someSourceSet)` is equivalent to adding a `dependsOn` to 
+`someSourceSet` from the default source set of the `KotlinCompilation`. In the general case, the replacement is 
+`KotlinCompilation.defaultSourceSet.dependsOn(someSourceSet)`, but often it is more readable to refer to that source set
+directly via `by getting`.
 
 Example with the code above:
 
