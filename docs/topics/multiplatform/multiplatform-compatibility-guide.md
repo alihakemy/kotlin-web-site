@@ -419,7 +419,7 @@ plugins {
 
 dependencies {
     testImplementation(kotlin("test"))
-    implementation("org.jetbrains.kotlinx:kotlinx-html:0.7.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-html:0.8.0")
 }
 
 kotlin {
@@ -454,7 +454,7 @@ kotlin {
         val jsMain by getting {
             dependencies {
                 // no need for 'js'-prefix here, you can do the plain copy-paste from top-level block
-                implementation("org.jetbrains.kotlinx:kotlinx-html:0.7.2")
+                implementation("org.jetbrains.kotlinx:kotlinx-html:0.8.0")
             }
         }
     }
