@@ -234,6 +234,7 @@ abstract class WildShape : Polygon() {
 }
 ```
 
+
 ## Companion objects
 
 If you need to write a function that can be called without having a class instance but that needs access to the internals
